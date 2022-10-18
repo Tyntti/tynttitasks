@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+//Database=localdb;Data Source=127.0.0.1;User Id=azure;Password=6#vWHD_$
+
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://azure:6#vWHD_$@HOST:127.0.0.1/localdb"
+}
+
+model kunta {
+  id Int @id @default(autoincrement())
+  kunta String
+  asukkaatYhteensa Int
+  asukkaatMiehet Int
+  asukkaatNaiset Int
+}
